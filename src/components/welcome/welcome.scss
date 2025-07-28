@@ -1,0 +1,50 @@
+.welcome {
+   padding: 430px 0 250px 0;
+
+   &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 700px;
+      height: 700px;
+      z-index: -5;
+      background-image: url('./../../img/pink-lenta-bg.png');
+      background-repeat: no-repeat;
+   }
+}
+
+.welcome-content {
+   text-align: center;
+}
+
+.welcome__title {
+   font-size: clamp(1.875rem, 1.438rem + 2.19vw, 4.063rem);
+   transition: all 1s ease;
+   font-weight: 700 !important;
+   margin-bottom: 10px !important;
+   opacity: 0;
+   transform: translateX(200px);
+
+   &.active {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+.welcome-subTitle {
+   transition: all 1s ease-in-out;
+   font-size: clamp(0.875rem, 0.8rem + 0.38vw, 1.25rem);
+   opacity: 0;
+   transform: translateX(-200px);
+
+   &.active {
+      opacity: 1;
+      transform: translateX(0);
+   }
+
+   @media only screen and (max-width: 400px) {
+      max-width: 280px;
+      margin-inline: auto;
+   }
+}

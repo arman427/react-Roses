@@ -1,0 +1,24 @@
+.buttonToTop-wrapper {
+   position: fixed;
+   right: 100px;
+   bottom: 100px;
+   z-index: 999;
+   background-color: rgb(253, 253, 133);
+   border-radius: 10px;
+   visibility: hidden;
+   opacity: 0;
+   transform: translateY(50px);
+   transition: all 0.3s ease;
+   
+
+   &.active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0px);
+   }
+
+   img {
+      width: 60px;
+      height: 60px;
+   }
+}

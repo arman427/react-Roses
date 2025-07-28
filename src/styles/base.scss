@@ -1,0 +1,60 @@
+:root {
+   --color-bg: #E5CBA8;
+   --color-text: #222;
+   --color-accent: #FF0085;
+   --color-muted: #5f0031;
+   --font-main: 'Roboto', sans-serif;
+   --font-accent: 'Playfair Display', sans-serif;
+}
+
+body {
+   background: linear-gradient(90deg, var(--color-bg), #fffec8);
+   background-repeat: no-repeat;
+   font-family: var(--font-main);
+   font-weight: 400;
+   color: var(--color-main);
+   line-height: 1.5;
+}
+
+body.no-scroll,
+html.no-scroll {
+   overflow: hidden;
+}
+
+html,
+body {
+   overflow-x: hidden;
+}
+
+html, body {
+   scroll-behavior: smooth;
+}
+
+.container {
+   max-width: 1500px;
+   width: 100%;
+   margin-inline: auto;
+   padding: 0 15px;
+}
+
+nav a {
+   font-family: var(--font-accent);
+   font-size: clamp(1.063rem, 1.025rem + 0.19vw, 1.25rem);
+   color: #222;
+   transition: all 0.3s ease;
+
+   &:hover {
+      color: var(--color-bg);
+
+   }
+}
+
+.title {
+   font-family: var(--font-accent);
+   font-weight: 600;
+   letter-spacing: 1px;
+   color: var(--color-muted);
+   font-size: clamp(1.875rem, 1.5rem + 1.88vw, 3.75rem);
+   margin-bottom: 30px;
+   text-align: center;
+}
